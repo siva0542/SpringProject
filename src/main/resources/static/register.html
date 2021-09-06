@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>Register</head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.register {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+.register:hover {
+  opacity: 1;
+}
+</style>
+</head>
 <body>
-<form action="register" method="post">
-    <input type="text"  name="name" placeholder="Name..."><br/>
-    <input type="text"   name="email"  placeholder="Email ID..."><br/>
-    <input type="number" name="ph_number" placeholder="phone number..."><br/>
-    <input type="password" name="password"  placeholder="Password..."><br/>
-    <input type="text"  name="card_number" placeholder="card_number..."><br/>
-    <input type="submit" value="register" onclick="Login"/>
-    <a href="/login">Login here</a>
+<form>
+    <div class="container">
+        <center>  <h1> Welcome to MakeMyTrip</h1> </center></br>
+        <center>  <h3> Please fill your detaials to register</h3> </center></br>
+        <hr>
+        <label> Name </label>
+        <input type="text" name="name" placeholder= "name" size="15" required />
+        <label > Email: </label></br>
+        <input type="email" name="email" placeholder="Email" size="15" required /></br>
+        <label>
+            Phone :
+        </label>
+        <input type="text" name="ph_number" placeholder="phone no." size="10" required/>
+        <label ><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <label ><b>Card Number</b></label>
+        <input type="text"  name="card_number" placeholder="card_number..."><br/>
+        <button type="submit" class="register">Register</button>
+        <a href="/login">Login here</a>
+    </div>
 </form>
 </body>
 </html>

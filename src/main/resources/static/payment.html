@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: white;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+.register:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
-<h1>Please select the type of payment</h1></br>
-<h5>CreditCard</h5></br>
-<a href="/creditCard">click here</a></br>
-<h5>DebitCard</h5></br>
-<a href="/debitCard">click here</a></br>
+<form method="post">
+    <div class="container">
+        <center>  <h3>Please select the type of Payment</h3> </center></br>
+        <hr>
+        <h5>CreditCard</h5></br>
+        <a href="/creditCard">click here</a></br>
+        <h5>DebitCard</h5></br>
+        <a href="/debitCard">click here</a></br>
+    </div>
+</form>
 </body>
 </html>

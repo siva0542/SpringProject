@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Bus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: white;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=radio] {
+  width: 5%;
+  padding: 15px 20px;
+  margin: 20px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+.register:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
 <form method="post">
-    <h1 align="center">Select the type of bus</h1>
-<input type="radio" id="ordinary" name="bus_type" value="Ordinary">
-<label for="ordinary">Ordinary</label><br>
-<input type="radio" id="express" name="bus_type" value="Express">
-<label for="ordinary">Express</label><br>
-<input type="radio" id="superLuxury" name="bus_type" value="SuperLuxury">
-<label for="superLuxury">Super Luxury</label><br>
-    <button type="submit">Proceed</button>
+    <div class="container">
+        <center>  <h3>Please Select the type of bus</h3> </center></br>
+        <hr>
+        <input type="radio" id="ordinary" name="bus_type" value="Ordinary">
+        <label for="ordinary">Ordinary</label><br>
+        <input type="radio" id="express" name="bus_type" value="Express">
+        <label for="ordinary">Express</label><br>
+        <input type="radio" id="superLuxury" name="bus_type" value="SuperLuxury">
+        <label for="superLuxury">Super Luxury</label><br>
+        <button type="submit" class="submit">Proceed</button>
+    </div>
 </form>
 </body>
 </html>
