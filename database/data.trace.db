@@ -1,0 +1,18 @@
+2021-09-07 08:17:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "siva"; SQL statement:
+select name and password from User_Details where name=? and password=? [22018-200]
+2021-09-07 08:19:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "siva"; SQL statement:
+select name and password from User_Details where name=? and password=? [22018-200]
+2021-09-07 08:19:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "siva"; SQL statement:
+select name and password from User_Details where name=? and password=? [22018-200]
+2021-09-07 08:19:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "siva"; SQL statement:
+select name and password from User_Details where name=? and password=? [22018-200]
+2021-09-07 09:59:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (PLACES: ""PLACE_ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PLACES"("PLACE_ID","DESTINATION","SOURCE")VALUES(?,?,?) [22018-200]
+2021-09-07 09:59:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (PLACES: ""PLACE_ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PLACES"("PLACE_ID","DESTINATION","SOURCE")VALUES(?,?,?) [22018-200]

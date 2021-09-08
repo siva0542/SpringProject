@@ -3,13 +3,19 @@ package com.example.makeMyTrip;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PlaceRepository placeRepository;
+
+    @Autowired
+    private AdminRepository adminRepository;
 
     @RequestMapping("register")
     public String register(UserDetails user){
@@ -35,13 +41,37 @@ public class UserController {
     }
 
 
+    @RequestMapping("adminLogin")
+    public String adminLogin(AdminLogin adminlogin)
+    {
+        System.out.println(" Admin Login process is going on.....");
+        Admin admin=adminRepository.findByLoginAndPassword(adminlogin.getUsername(),adminlogin.getPassword());
+        if(!(adminlogin.getUsername()==null)){
+            if(adminlogin.getUsername().equalsIgnoreCase(adminlogin.getUsername()) && adminlogin.getPassword().equalsIgnoreCase(adminlogin.getPassword()))
+                return "redirect:/adminSource";
+        }
+        return "adminLogin";
+    }
+
+    @RequestMapping("adminSource")
+    public String adminSource(Places places){
+        System.out.println("Admin added places.......");
+        if(!(places.getSource()==null && places.getDestination()==null)){
+            placeRepository.save(places);
+            return "redirect:/adminLogin";
+        }
+            return "adminSource";
+    }
+
+
     @RequestMapping("travel")
     public  String travel(Travel travel){
         System.out.println("travelling page opened successfully....");
+        Places places=placeRepository.findBySourceAndDestination(travel.getSource(),travel.getDestination());
         if(!(travel.getSource()==null)){
+            if(places.getSource().equalsIgnoreCase(travel.getSource()) && places.getDestination().equalsIgnoreCase(travel.getDestination()))
             return "redirect:/vehicle";
         }
-        else
         return "travel";
     }
 

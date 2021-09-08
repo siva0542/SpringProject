@@ -12,7 +12,7 @@ body{
   background-color: lightblue;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=date] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -31,7 +31,7 @@ hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-.login {
+.submit {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -47,19 +47,16 @@ hr {
 </style>
 </head>
 <body>
-<form>
+<form method="post">
     <div class="container">
-        <center>  <h1> Welcome to MakeMyTrip</h1> </center></br>
-        <center>  <h3> Please fill your Username & password to Login</h3> </center></br>
+        <center>  <h3> Add source and destination</h3> </center></br>
         <hr>
-        <label><b>UserName</b></label>
-        <input type="text" name="username" placeholder= "Username" size="15" required />
-        <label ><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit" class="login">Login</button>
-        <a href="/register">Register here</a>
+        <label><b>Source</b></label>
+        <input type="text" name="source" placeholder= "From" size="15" required />
+        <label ><b> Destination </b></label>
+        <input type="text" placeholder="To" name="destination" required/>
+        <button type="submit" class="submit">Update</button>
     </div>
 </form>
 </body>
 </html>
-
