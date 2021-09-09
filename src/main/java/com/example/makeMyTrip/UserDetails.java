@@ -67,4 +67,15 @@ public class UserDetails {
     }
 
 
+    @Override
+    public String toString() {
+        return "UserDetails{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", ph_number='" + ph_number + '\'' +
+                ", card_number='" + card_number + '\'' +
+                ", password='" + password + '\'' +
+                ", user_id=" + user_id +
+                '}';
+    }
 }

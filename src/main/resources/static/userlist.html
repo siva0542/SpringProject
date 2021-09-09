@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:c="">
+<html xmlns=""><head>
+  <title> home </title>
+  <style>
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: lightblue;
+}
+button {
+       background-color: #4CAF50;
+       width: 100%;
+        color: orange;
+        padding: 15px;
+        margin: 10px 0px;
+        border: none;
+        cursor: pointer;
+         }
+ form {
+        border: 3px solid #f1f1f1;
+    }
+ input[type=text], input[type=password] {
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 2px solid green;
+        box-sizing: border-box;
+    }
+ button:hover {
+        opacity: 0.7;
+    }
+
+ .container {
+        padding: 25px;
+        background-color: lightblue;
+    }
+    .submitButton {
+                 display: inline-block;
+                 padding: 10px 20px;
+                 text-align: center;
+                 text-decoration: none;
+                 color: #ffffff;
+                 background-color: #7aa8b7;
+                 border-radius: 6px;
+                 outline: none;
+                 margin-top: 19px;
+               }
+</style>
+</head>
+<body>
+
+
+<table width="780" align=center cellspacing=0 border="4" cellpadding=0>
+
+
+  <tr><td>
+    <table width="600" height="400"align=center cellspacing=0 border="0" cellpadding=0>
+      <tr><td>
+        <h3> Welcome Admin </h3><BR>
+        <fieldset id="fieldhead">
+          <table align=center cellspacing=1 cellpadding=3><form method=get action="">
+            <div align="center">
+              <table border="1" cellpadding="5">
+                <caption><h2>User Details</h2></caption>
+                <tr>
+
+                  <th>user_id</th>
+                  <th>name</th>
+                  <th>email</th>
+                  <th>ph_number</th>
+                  <th>card_number</th>
+                  <th>password</th>
+
+                </tr>
+
+
+                <c:forEach items="${allUserDetails}" var="user">
+                  <tr>
+                    <td>${user.user_id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.ph_number}</td>
+                    <td>${user.card_number}</td>
+                    <td>${user.password}</td>
+
+
+                  </tr>
+                </c:forEach>
+
+              </table>
+            </div>
+            <a class="submitButton" href="/adminSource"> Main menu </a>
+          </form>
+          </table><BR>
+        </fieldset>
+      </td></tr></table>
+  </td></tr>
+</table>
+
+
+</body>
+</html>

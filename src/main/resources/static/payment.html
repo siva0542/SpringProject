@@ -2,59 +2,53 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-body{
-  font-family: Calibri, Helvetica, sans-serif;
-  background-color: white;
-}
-.container {
-    padding: 50px;
-  background-color: lightblue;
+    <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap');
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    background-image: linear-gradient( 200deg, #4053d8 12%, rgba(255, 255, 255, 0) 65%), linear-gradient(255deg, #e53ab8 71%, rgba(255, 255, 255, 0) 87%), radial-gradient(ellipse at 85% 52%, #ff9962 31%, rgba(255, 255, 255, 0) 99%), radial-gradient( ellipse at -45% 119%, #ff7870 66%, rgba(255, 255, 255, 0) 84%), linear-gradient(110deg, #4a4518 18%, rgba(255, 255, 255, 0) 98%);
 }
 
-input[type=text], input[type=date] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+.wrapper {
+    position: relative;
 }
-input[type=text]:focus, input[type=password]:focus {
-  background-color: orange;
-  outline: none;
+
+a {
+    text-decoration: none;
 }
- div {
-            padding: 10px 0;
-         }
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+
+.form {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    place-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30;
+    color: seashell;
+    display: grid;
+    padding: 1em 2em 2em 2em;
+    background: rgba(255, 255, 255, 0.01);
+    -webkit-box-shadow: 2px 2px 30px 24px rgba(0, 0, 0, 0.01);
+    box-shadow: 2px 2px 30px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-.submit {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 30%;
-  opacity: 0.9;
-}
-.register:hover {
-  opacity: 1;
-}
+
 </style>
 </head>
 <body>
 <form method="post">
-    <div class="container">
-        <center>  <h3>Please select the type of Payment</h3> </center></br>
+    <div class="wrapper">
+        <center>  <h1>Please select the type of Payment</h1> </center></br>
         <hr>
-        <h5>CreditCard</h5></br>
-        <a href="/creditCard">click here</a></br>
-        <h5>DebitCard</h5></br>
-        <a href="/debitCard">click here</a></br>
+        <center><h2>CreditCard</h2></br></center>
+        <center><a href="/creditCard"><h3>click here</h3></a></br></center>
+        <center><h2>DebitCard</h2></br></center>
+        <center><a href="/debitCard"><h3>click here</h3></a></br></center>
     </div>
 </form>
 </body>

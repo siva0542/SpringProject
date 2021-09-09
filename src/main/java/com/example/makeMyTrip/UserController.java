@@ -3,7 +3,9 @@ package com.example.makeMyTrip;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class UserController {
@@ -21,11 +23,22 @@ public class UserController {
     public String register(UserDetails user){
         System.out.println("Registration process is going on.......");
         if(!(user.getName()==null)){
-            userRepository.save(user);
-            return "redirect:/login";
+                userRepository.save(user);
+                return "redirect:/login";
         }
-        else
         return "register";
+    }
+
+    @RequestMapping("userlist")
+    public ModelAndView userlist(){
+        System.out.println("Displaying users in admin portal");
+        Iterable<UserDetails> user=userRepository.findAll();
+        ModelAndView mv=new ModelAndView();
+        mv.setViewName("userlist");
+        mv.addObject("user",user);
+        System.out.println(user);
+
+        return mv;
     }
 
     @RequestMapping("login")
@@ -39,6 +52,7 @@ public class UserController {
         }
         return "login";
     }
+
 
 
     @RequestMapping("adminLogin")
